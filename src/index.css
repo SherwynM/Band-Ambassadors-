@@ -1,13 +1,79 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  font-family: 'Inter', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body
+{
+  
+    overflow-x:hidden;
+  background: #000300;
 }
+.hero-bg 
+{
+  background: radial-gradient(ellipse at center, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
+}
+
+.glow-yellow {
+          box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+        }
+   /* Optimized sound bar animations with GPU acceleration */
+        @keyframes sound-bar-1 {
+          0%, 100% { 
+            height: 20%;
+            transform: translateZ(0);
+          }
+          50% { 
+            height: 100%;
+            transform: translateZ(0);
+          }
+        }
+        
+        @keyframes sound-bar-2 {
+          0%, 100% { 
+            height: 40%;
+            transform: translateZ(0);
+          }
+          50% { 
+            height: 80%;
+            transform: translateZ(0);
+          }
+        }
+        
+        @keyframes sound-bar-3 {
+          0%, 100% { 
+            height: 60%;
+            transform: translateZ(0);
+          }
+          50% { 
+            height: 90%;
+            transform: translateZ(0);
+          }
+        }
+        
+        .animate-sound-bar-1 {
+          animation: sound-bar-1 0.8s ease-in-out infinite;
+          will-change: height;
+          transform: translateZ(0);
+          backface-visibility: hidden;
+        }
+        
+        .animate-sound-bar-2 {
+          animation: sound-bar-2 0.8s ease-in-out infinite;
+          will-change: height;
+          transform: translateZ(0);
+          backface-visibility: hidden;
+        }
+        
+        .animate-sound-bar-3 {
+          animation: sound-bar-3 0.8s ease-in-out infinite;
+          will-change: height;
+          transform: translateZ(0);
+          backface-visibility: hidden;
+        }
